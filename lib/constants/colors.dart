@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 const Color primaryGreen = Color.fromRGBO(6, 138, 153, 1);
 const Color backgroundColor = Color.fromRGBO(250, 250, 250, 1);
 const Color inputColor = Color.fromRGBO(165, 165, 177, 1);
+const Color InputBorderColor = Color.fromRGBO(236, 236, 238, 1);
 
 const Color subtitleColor = Color.fromRGBO(123, 123, 138, 1);
 const Color grayColor = Color.fromRGBO(152, 152, 157, 1);

@@ -12,9 +12,9 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           Center(
-            child: Container(
+            child: SizedBox(
               width: 960,
-              height: 250,
+              height: 298,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -30,6 +30,85 @@ class HomePage extends StatelessWidget {
                       fontSize: 18,
                     ),
                   ),
+                  const SizedBox(height: 38),
+                  Container(
+                    width: 960,
+                    height: 118,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(16),
+                      color: Colors.white,
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 705,
+                          height: 70,
+                          decoration: BoxDecoration(
+                              border: Border.all(
+                                  color: InputBorderColor,
+                                  width: 1,
+                                  style: BorderStyle.solid),
+                              borderRadius: const BorderRadius.only(
+                                topLeft: Radius.circular(8.0),
+                                bottomLeft: Radius.circular(8.0),
+                              )),
+                          child: const Center(
+                            child: TextField(
+                              decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Digite a matricula',
+                                contentPadding: EdgeInsets.only(left: 24.0),
+                              ),
+                              maxLines: 1,
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                          width: 208,
+                          height: 70,
+                          child: ElevatedButton(
+                              style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(primaryGreen),
+                                  shape: MaterialStateProperty.all(
+                                      const RoundedRectangleBorder(
+                                          borderRadius: BorderRadius.only(
+                                    topRight: Radius.circular(8.0),
+                                    bottomRight: Radius.circular(8.0),
+                                  )))),
+                              onPressed: () {
+                                showDialog(
+                                  context: context,
+                                  builder: (BuildContext context) {
+                                    return Center(
+                                      child: Container(
+                                        decoration: BoxDecoration(
+                                          color: Colors.white,
+                                          borderRadius:
+                                              BorderRadius.circular(8.0),
+                                        ),
+                                        height: 640.0,
+                                        width: 560.0,
+                                        child: Column(children: [
+                                          Row(children: [
+                                            SizedBox(
+                                              width: 528,
+                                              height: 75,
+                                              child: Text('John Doe'),
+                                            ),
+                                          ])
+                                        ]),
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                              child: const Text('Consultar estudante')),
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -38,7 +117,7 @@ class HomePage extends StatelessWidget {
             bottom: 0,
             left: 0,
             right: 0,
-            child: Container(
+            child: SizedBox(
               height: 16,
               child: Image.asset(
                 MarkImages.footer,
