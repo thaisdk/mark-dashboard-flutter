@@ -14,5 +14,5 @@ const Color greenLabel = Color.fromRGBO(234, 248, 244, 1);
 const Color greenText = Color.fromRGBO(84, 114, 106, 1);
 
 const Color redTitle = Color.fromARGB(255, 202, 14, 14);
-const Color redLabel = Color.fromRGBO(171, 82, 82, 0.25);
+const Color redLabel = Color.fromRGBO(254, 240, 240, 1);
 const Color redText = Color.fromRGBO(171, 82, 82, 1);

@@ -12,8 +12,8 @@ class MarkApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: true,
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'mark',
       home: HomePage(),
     );
